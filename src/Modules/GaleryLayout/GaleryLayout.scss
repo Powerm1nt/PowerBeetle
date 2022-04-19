@@ -1,0 +1,32 @@
+@import "src/Common/Styling/main";
+
+.galerylayout-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 20em;
+
+  .galerylayout-overlay-btns {
+    z-index: 100;
+    overflow: hidden;
+    align-self: flex-end;
+    background-color: $cmpns-bgtrans-default-color;
+    border-radius: 10px;
+
+    .MuiSvgIcon-root {
+      color: $cmpns-default-color;
+    }
+  }
+
+  .cards {
+    &-galeryview {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+    }
+
+    &-listview {
+      grid-template-columns: none;
+    }
+  }
+}

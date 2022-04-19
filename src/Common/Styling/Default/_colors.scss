@@ -1,0 +1,33 @@
+/* Colors & Common Colors Design */
+$main-bg: #1a212b;
+$darker-bg: #232d3a;
+$highlight-bg: #212d3d;
+$highlight-bgtrans: rgba(33, 45, 61, 0.650);
+
+/* Gradients Colors */
+$orange-variation-gradient: linear-gradient(
+  296.92deg,
+  rgba(255, 122, 0, 0.75) 30.05%,
+  rgba(255, 0, 0, 0.58) 72.63%
+);
+
+/* Foreground Colors */
+$main-text-color: whitesmoke;
+$word-default-evidence-color: white;
+
+/* Theme Default Accent Colors */
+$cmpns-default-color: #3b95fd;
+$cmpns-bgtrans-default-color: rgba(25, 118, 210, 0.2);
+$cmpns-bgtrans-hover-color: rgba(25, 118, 210, 0.3);
+
+/* Disabled Components Color */
+$cmpns-disabled-color: rgba(150, 150, 150, 0.025);
+$cmpns-disabled-default-color: rgba(23, 110, 197, 0.5);
+
+/* Success Components Color */
+$cmpns-bgtrans-success-color: rgba(1, 170, 1, 0.2);
+$cmpns-bgtrans-success-hover-color: rgba(2, 150, 2, 0.3);
+
+/* Error Components Color */
+$cmpns-bgtrans-error-color: rgba(194, 0, 0, 0.2);
+$cmpns-bgtrans-error-hover-color: rgba(255, 0, 0, 0.3);

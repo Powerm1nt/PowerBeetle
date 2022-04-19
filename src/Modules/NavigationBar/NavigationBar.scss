@@ -1,0 +1,88 @@
+@import "src/Common/Styling/main";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
+
+@mixin hide-navbar {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.hide-navbar {
+  @include hide-navbar();
+}
+
+.navigationbar-compns {
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  background: $darker-bg;
+  height: 80px;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: 0.2s 0.2s transform ease-in-out, 0.2s 0.2s opacity ease-in-out;
+
+  @supports (backdrop-filter: blur()) {
+    background: $highlight-bgtrans;
+    backdrop-filter: blur(20px);
+  }
+
+  @media screen and (min-width: 800px) {
+    @include hide-navbar();
+  }
+
+  .navigbar-content {
+    display: flex;
+    gap: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    a {
+      text-decoration: none !important;
+    }
+
+    .active {
+      .MuiButton-root {
+        font-weight: bold;
+        font-size: medium;
+        color: $cmpns-default-color !important;
+      }
+    }
+
+    .navigbar-button {
+      flex-direction: column;
+      justify-content: center;
+      text-transform: capitalize;
+      font-family: "Outfit", sans-serif;
+      width: 100px;
+      height: fit-content !important;
+      border-radius: 10px !important;
+      transition: all 0.1s ease-in-out;
+      background: none !important;
+      color: $cmpns-disabled-default-color !important;
+      outline: none !important;
+
+      &:focus-within {
+        opacity: 1 !important;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 80px;
+        height: 40px;
+      }
+
+      @media screen and (max-width: 350px) {
+        width: 70px;
+        height: 30px;
+      }
+
+      .MuiButton-startIcon {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}

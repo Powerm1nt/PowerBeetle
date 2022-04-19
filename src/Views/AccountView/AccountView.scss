@@ -1,0 +1,69 @@
+@import "src/Common/Styling/main";
+
+.account-section {
+  @media screen and (min-width: 800px) {
+    padding: 1em;
+  }
+
+  .s-profile {
+    display: flex;
+    padding: 20px 0;
+    border-radius: 10px;
+    gap: 50px;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+
+    .w-avatar {
+      display: flex;
+      padding: 30px;
+
+      .m-avatar {
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        background: grey;
+        padding: 20px;
+        border-radius: 300px;
+
+        &:hover {
+          outline: 1px white solid;
+        }
+      }
+    }
+
+    .w-profile-setup {
+      display: flex;
+      padding: 30px;
+      border-radius: 10px;
+
+      .profile-flds {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .flds {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .profile-flds {
+            width: 20em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.widget {
+  @media screen and (max-width: 800px) {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}

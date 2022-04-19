@@ -1,0 +1,40 @@
+/* Default Theme */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500,700&display=swap");
+@import "colors";
+@import "anims";
+@import "cmpns";
+
+body {
+  background-color: $main-bg;
+  color: $main-text-color;
+  font-family: "Outfit", sans-serif;
+}
+
+.activity-header {
+  .activity-htitle {
+    font-size: 35pt;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    padding: 5px 10px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 20pt;
+    }
+  }
+}
+
+.activity {
+  min-height: 100vh;
+
+  .activity-content {
+    display: flex;
+    flex-direction: column !important;
+    margin: 10px;
+    padding: 5px;
+    gap: 15px;
+  }
+}
+
+.w-evidence {
+  color: $word-default-evidence-color;
+}

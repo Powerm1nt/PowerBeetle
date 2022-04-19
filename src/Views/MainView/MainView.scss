@@ -1,0 +1,10 @@
+.mview-view {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .rmain-content-view {
+        min-height: 80vh;
+    }
+}

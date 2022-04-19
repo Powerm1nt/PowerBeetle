@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
+@import "src/Common/Styling/main";
+
+.cmpns-preview {
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
+  gap: 30px;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: none;
+    margin: initial;
+  }
+}
+
+.prevcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .desc-title-preview {
+    text-align: center;
+    font-weight: 100;
+    font-size: 16pt;
+    padding-bottom: 10px;
+  }
+
+  .cmpns-prevcmpns-custombtn-btn {
+    background: $orange-variation-gradient !important;
+    text-shadow: 1px 3px 10px #000;
+  }
+}
+
+.links-preview {
+  text-align: center;
+}
+
+.cards-preview {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+
+    .cmpns-itemcard {
+      box-shadow: 0 5px 10px #010409;
+      transition: box-shadow 0.2s 100ms ease-in-out,
+      transform 0.2s 100ms ease-in-out;
+      width: 250px;
+      height: 280px;
+
+      &:hover {
+        box-shadow: 0 5px 24px #010409;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.950);
+      }
+
+      .content-itemcard {
+        transition: transform 0.2s 100ms ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+

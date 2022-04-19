@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@700&display=swap");
+@import "src/Common/Styling/main";
+
+.iconfield-fld {
+  min-width: 50px !important;
+  transition: width 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  border-radius: 300px;
+
+  &:focus-within {
+    outline: 2px $cmpns-default-color solid;
+    animation: 0.2s fld-focus-anim cubic-bezier(0, 0, 0.2, 1);
+    background-color: $main-bg;
+  }
+
+  .MuiTextField-root,
+  .MuiFilledInput-root {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-radius: 300px;
+  }
+
+  .MuiFilledInput-root {
+    align-items: baseline;
+
+    &,
+    &::after,
+    &::before,
+    &:hover {
+      border-bottom: none !important;
+    }
+  }
+
+  .MuiSvgIcon-root {
+    color: $cmpns-default-color;
+    cursor: pointer;
+  }
+
+  .MuiFilledInput-input {
+    padding: 10px;
+    color: $cmpns-default-color;
+    font-family: "M PLUS 1 Code", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+}

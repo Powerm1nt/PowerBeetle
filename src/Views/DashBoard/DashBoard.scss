@@ -1,0 +1,48 @@
+@import "src/Common/Styling/main";
+
+.dashboard {
+  padding: 0;
+  margin: 0;
+
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .d-tabbar {
+    background-color: $highlight-bg;
+
+    .tab {
+      color: $cmpns-disabled-default-color;
+    }
+
+    .Mui-selected {
+      color: $cmpns-default-color !important;
+      font-weight: bold;
+    }
+  }
+
+  .dash-content {
+    flex: 1;
+    padding: 10px;
+  }
+}
+
+.dashboard-view {
+  .dv-title {
+    font-size: 30pt;
+    font-weight: 500;
+  }
+
+  .dv-content {
+    display: flex;
+    flex-direction: column;
+
+    .dv-brief-desc {
+      font-size: 14pt;
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+}
